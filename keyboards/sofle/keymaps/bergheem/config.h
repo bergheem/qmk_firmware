@@ -6,3 +6,4 @@ for more options.
 */
 
 #define SPLIT_USB_DETECT
+#define UNICODE_SELECTED_MODES UNICODE_MODE_WINCOMPOSE

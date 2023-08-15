@@ -7,3 +7,5 @@ for more options.
 
 #define SPLIT_USB_DETECT
 #define UNICODE_SELECTED_MODES UNICODE_MODE_WINCOMPOSE
+
+#define OLED_FONT_H "keyboards/sofle/keymaps/bergheem/berglcdfont.c"

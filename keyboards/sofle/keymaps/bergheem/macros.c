@@ -1,4 +1,4 @@
-#define VERSION     "bergm0.8"
+#include "version.c"
 
 enum macro_keycodes {
     MC_VERS = SAFE_RANGE,

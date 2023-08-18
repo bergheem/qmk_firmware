@@ -1,2 +1,2 @@
 
-#define VERSION     "bergm1.1"
+#define VERSION     "bergm1.2"

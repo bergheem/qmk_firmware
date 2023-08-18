@@ -9,6 +9,10 @@
 
 enum unicode_names {
     UM_SNEK,
+	UM_ROKT,
+	UM_KISS,
+	UM_SQUI,
+	UM_PIGG,
 	UM_AGRV,
 	UM_EGRV,
 	UM_EACT,
@@ -19,6 +23,10 @@ enum unicode_names {
 
 const uint32_t unicode_map[] PROGMEM = {
     [UM_SNEK]  = 0x1F40D, // 🐍
+    [UM_ROKT]  = 0x1F680, // 🚀
+    [UM_KISS]  = 0x1F618, // 😘
+	[UM_SQUI]  = 0x1F991, // 🦑
+	[UM_PIGG]  = 0x1F416, // 🐖
 	[UM_AGRV]  = 0x00E0, // à
 	[UM_EGRV]  = 0x00E8, // è
 	[UM_EACT]  = 0x00E9, // é

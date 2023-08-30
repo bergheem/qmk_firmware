@@ -13,6 +13,8 @@ enum unicode_names {
 	UM_KISS,
 	UM_SQUI,
 	UM_PIGG,
+	UM_WINK,
+	UM_HART,
 	UM_AGRV,
 	UM_EGRV,
 	UM_EACT,
@@ -27,6 +29,8 @@ const uint32_t unicode_map[] PROGMEM = {
     [UM_KISS]  = 0x1F618, // 😘
 	[UM_SQUI]  = 0x1F991, // 🦑
 	[UM_PIGG]  = 0x1F416, // 🐖
+	[UM_WINK]  = 0x1F609, // 😉
+	[UM_HART]  = 0x02764, // ❤
 	[UM_AGRV]  = 0x00E0, // à
 	[UM_EGRV]  = 0x00E8, // è
 	[UM_EACT]  = 0x00E9, // é

@@ -72,45 +72,45 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* LOWER
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * |      |  F1  |  F2  |  F3  |  F4  |  F5  |                    |  F6  |  F7  |  F8  |  F9  | F10  | F11  |
+ * | mute |  F1  |  F2  |  F3  |  F4  |  F5  |                    |  F6  |  F7  |  F8  |  F9  | F10  | Vers |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |  `   |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  | F12  |
+ * |  `   | F11  | F12  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  | Del  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |   !  |   @  |   #  |   $  |   %  |-------.    ,-------|   ^  |   &  |   *  |   (  |   )  |   |  |
+ * |   // |   !  |   @  |   #  |   $  |   %  |-------.    ,-------|   ^  |   &  |   *  |   (  |   )  |   |  |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
- * |      |  =   |  -   |  +   |   {  |   }  |-------|    |-------|   [  |   ]  |   ;  |   :  |   \  | Shift|
+ * | Shift|  =   |  -   |  +   |   {  |   }  |-------|    |-------|   [  |   ]  |   ;  |   :  |   \  | Shift|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *            |      |      |      |LOWER | /       /       \      \  |RAISE |      |      |      |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
 [_LOWER] = LAYOUT(
-	XXXXXXX,	KC_F1,		KC_F2,		KC_F3,		KC_F4,		KC_F5,								KC_F6,		KC_F7,		KC_F8,		KC_F9,		KC_F10,		KC_F11,
-	KC_GRV,		KC_1,		KC_2,		KC_3,		KC_4,		KC_5,								KC_6,		KC_7,		KC_8,		KC_9,		KC_0,		KC_F12,
-	XXXXXXX,	KC_EXLM,	KC_AT,		KC_HASH,	KC_DLR,		KC_PERC,							KC_CIRC,	KC_AMPR,	KC_ASTR,	KC_LPRN,	KC_RPRN,	KC_PIPE,
+	LALT(KC_M),	KC_F1,		KC_F2,		KC_F3,		KC_F4,		KC_F5,								KC_F6,		KC_F7,		KC_F8,		KC_F9,		KC_F10,		MC_VERS,
+	KC_GRV,		KC_F11,		KC_F12,		KC_3,		KC_4,		KC_5,								KC_6,		KC_7,		KC_8,		KC_9,		KC_0,		KC_DEL,
+	LCA(KC_C),	KC_EXLM,	KC_AT,		KC_HASH,	KC_DLR,		KC_PERC,							KC_CIRC,	KC_AMPR,	KC_ASTR,	KC_LPRN,	KC_RPRN,	KC_PIPE,
 	_______,	KC_EQL,		KC_MINS,	KC_PLUS,	KC_LCBR,	KC_RCBR,	_______,	_______,	KC_LBRC,	KC_RBRC,	KC_SCLN,	KC_COLN,	KC_BSLS,	_______,
 					_______,	_______,	_______,	_______,		_______,			_______,		_______,	_______,	_______,	_______
 ),
 
 /* RAISE
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * |      |      |      |      |      |  Num |                    |      |      |      |      | Pause| Vers |
+ * |      | LogX |SerFld|      |   ❤ |  Num |                    |      |      |      |      | Pause| Vers |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |      |   🐖 |  è é |   🚀 | Scrl |                    |      |   ù  |   ì  |   ò  | DLine|  Del |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |   à  |   🦑 |      |   😘 | Caps |-------.    ,-------| Pscr |      |  Up  |      | Home | PgUp |
+ * |      |   à  |   🦑 |   😉 |  😘 | Caps |-------.    ,-------| Pscr |      |  Up  |      | Home | PgUp |
  * |------+------+------+------+------+------|  MUTE |    |  PLAY |------+------+------+------+------+------|
- * | Redo | Undo |  Cut | Copy | Paste|      |-------|    |-------|      | Left | Down | Right|  End |PgDown|
+ * | Shift| Undo |  Cut | Copy | Paste|      |-------|    |-------|      | Left | Down | Right|  End |PgDown|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *            |      |      |      |LOWER | /       /       \      \  |RAISE |      |      |      |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
 [_RAISE] = LAYOUT(
-	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	KC_NUM,								XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	KC_PAUSE,	MC_VERS,
-	XXXXXXX,	XXXXXXX,	X(UM_PIGG),	KI_EUNC,	X(UM_ROKT),	KC_SCRL,							XXXXXXX,	KI_UUNC,	KI_IUNC,	KI_OUNC,	KC_INS, 	KC_DEL,
-	XXXXXXX,	KI_AUNC,	X(UM_SQUI),	XXXXXXX,	X(UM_KISS),	KC_CAPS,							KC_PSCR,	XXXXXXX,	KC_UP,		XXXXXXX,	KC_HOME,	KC_PGUP,
-	KC_AGIN,	KC_UNDO,	KC_CUT,		KC_COPY,	KC_PASTE,	XXXXXXX,	_______,	_______,	XXXXXXX,	KC_LEFT,	KC_DOWN,	KC_RGHT,	KC_END,		KC_PGDN,
+	XXXXXXX,	MC_LOGX,	MC_SERF,	XXXXXXX,	X(UM_HART),	XXXXXXX,								XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	KC_PAUSE,	MC_VERS,
+	XXXXXXX,	XXXXXXX,	X(UM_PIGG),	KI_EUNC,	X(UM_ROKT),	KC_NUM,							XXXXXXX,	KI_UUNC,	KI_IUNC,	KI_OUNC,	KC_INS, 	KC_DEL,
+	XXXXXXX,	KI_AUNC,	X(UM_SQUI),	X(UM_WINK),	X(UM_KISS),	KC_CAPS,							KC_PSCR,	XXXXXXX,	KC_UP,		XXXXXXX,	KC_HOME,	KC_PGUP,
+	_______,	KC_UNDO,	KC_CUT,		KC_COPY,	KC_PASTE,	KC_SCRL,	_______,	_______,	XXXXXXX,	KC_LEFT,	KC_DOWN,	KC_RGHT,	KC_END,		KC_PGDN,
 					_______,	_______,	_______,	_______,		_______,			_______,    	_______,	_______,	_______,	_______
 ),
 
@@ -194,8 +194,8 @@ static void print_status_narrow(void) {
     oled_write_P(PSTR("\n"), false);
     led_t led_usb_state = host_keyboard_led_state();
     oled_write_P(PSTR("NUMLK"), led_usb_state.num_lock);
-    oled_write_P(PSTR("SCRLK"), led_usb_state.scroll_lock);
     oled_write_P(PSTR("CPSLK"), led_usb_state.caps_lock);
+    oled_write_P(PSTR("SCRLK"), led_usb_state.scroll_lock);
 	
     // Print current version
     oled_write_P(PSTR("\n\n\n\n"), false);
@@ -374,10 +374,19 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
             tap_code(KC_VOLD);
         }
     } else if (index == 1) {
+		led_t led_usb_state = host_keyboard_led_state();
         if (clockwise) {
-            tap_code(KC_PGDN);
+			if (!led_usb_state.num_lock) {
+				tap_code(KC_RGHT);
+			} else {
+				tap_code(KC_DOWN);
+			}
         } else {
-            tap_code(KC_PGUP);
+			if (!led_usb_state.num_lock) {
+				tap_code(KC_LEFT);
+			} else {
+				tap_code(KC_UP);
+			}
         }
     }
     return false;

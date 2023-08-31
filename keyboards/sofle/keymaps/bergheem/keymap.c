@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KC_GRV,		KC_1,		KC_2,		KC_3,		KC_4,		KC_5,								KC_6,		KC_7,		KC_8,		KC_9,		KC_0,		KC_MINS,
 	KC_ESC,		KC_Q,		KC_W,		KC_E,		KC_R,		KC_T,								KC_Y,		KC_U,		KC_I,		KC_O,		KC_P,		KC_BSPC,
 	KC_TAB,		KC_A,		KC_S,		KC_D,		KC_F,		KC_G,								KC_H,		KC_J,		KC_K,		KC_L,		KC_SCLN,	KC_QUOT,
-	KC_LSFT,	KC_Z,		KC_X,		KC_C,		KC_V,		KC_B,		KC_MUTE,	KC_MPLY,	KC_N,		KC_M,		KC_COMM,	KC_DOT,		KC_SLSH,	KC_RSFT,
+	KC_LSFT,	KC_Z,		KC_X,		KC_C,		KC_V,		KC_B,		KC_MPLY,	KC_MUTE,	KC_N,		KC_M,		KC_COMM,	KC_DOT,		KC_SLSH,	KC_RSFT,
 					KC_LGUI,	KC_LALT,	KC_LCTL,	MO(_LOWER),		KC_SPC,				KC_ENT,			MO(_RAISE),	KC_RCTL,	KC_RALT,	KC_APP
 ),
 
@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KC_GRV,		KC_1,		KC_2,		KC_3,		KC_4,		KC_5,								KC_6,		KC_7,		KC_8,		KC_9,		KC_0,		KC_MINS,
 	KC_ESC,		KC_Q,		KC_W,		KC_F,		KC_P,		KC_G,								KC_J,		KC_L,		KC_U,		KC_Y,		KC_SCLN,	KC_BSPC,
 	KC_TAB,		KC_A,		KC_R,		KC_S,		KC_T,		KC_D,								KC_H,		KC_N,		KC_E,		KC_I,		KC_O,		KC_QUOT,
-	KC_LSFT,	KC_Z,		KC_X,		KC_C,		KC_V,		KC_B,		KC_MUTE,	KC_MPLY,	KC_K,		KC_M,		KC_COMM,	KC_DOT,		KC_SLSH,	KC_RSFT,
+	KC_LSFT,	KC_Z,		KC_X,		KC_C,		KC_V,		KC_B,		KC_MPLY,	KC_MUTE,	KC_K,		KC_M,		KC_COMM,	KC_DOT,		KC_SLSH,	KC_RSFT,
                  KC_LGUI,		KC_LALT,	KC_LCTL,	MO(_LOWER),		KC_SPC,				KC_ENT,			MO(_RAISE),	KC_RCTL,	KC_RALT,	KC_APP
 ),
 
@@ -74,11 +74,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * | mute |  F1  |  F2  |  F3  |  F4  |  F5  |                    |  F6  |  F7  |  F8  |  F9  | F10  | Vers |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |  `   | F11  | F12  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  | Del  |
+ * | ESC  | F11  | F12  |  è é |   (  |   )  |                    |      |   ù  |   ì  |   ò  |      | Del  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |   // |   !  |   @  |   #  |   $  |   %  |-------.    ,-------|   ^  |   &  |   *  |   (  |   )  |   |  |
- * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
- * | Shift|  =   |  -   |  +   |   {  |   }  |-------|    |-------|   [  |   ]  |   ;  |   :  |   \  | Shift|
+ * |   // |   à  |   /  |   *  |   [  |   ]  |-------.    ,-------|   °  |      |      |      |   |  |      |
+ * |------+------+------+------+------+------|  MUTE |    |  PLAY |------+------+------+------+------+------|
+ * |LShift|   =  |   -  |   +  |   {  |   }  |-------|    |-------|      |      |   ;  |   :  |   \  |RShift|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *            |      |      |      |LOWER | /       /       \      \  |RAISE |      |      |      |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
@@ -86,31 +86,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_LOWER] = LAYOUT(
 	LALT(KC_M),	KC_F1,		KC_F2,		KC_F3,		KC_F4,		KC_F5,								KC_F6,		KC_F7,		KC_F8,		KC_F9,		KC_F10,		MC_VERS,
-	KC_GRV,		KC_F11,		KC_F12,		KC_3,		KC_4,		KC_5,								KC_6,		KC_7,		KC_8,		KC_9,		KC_0,		KC_DEL,
-	LCA(KC_C),	KC_EXLM,	KC_AT,		KC_HASH,	KC_DLR,		KC_PERC,							KC_CIRC,	KC_AMPR,	KC_ASTR,	KC_LPRN,	KC_RPRN,	KC_PIPE,
-	_______,	KC_EQL,		KC_MINS,	KC_PLUS,	KC_LCBR,	KC_RCBR,	_______,	_______,	KC_LBRC,	KC_RBRC,	KC_SCLN,	KC_COLN,	KC_BSLS,	_______,
+	_______,	KC_F11,		KC_F12,		KI_EUNC,	KC_LPRN,	KC_RPRN,							XXXXXXX,	KI_UUNC,	KI_IUNC,	KI_OUNC,	XXXXXXX,	KC_DEL,
+	LCA(KC_C),	KI_AUNC,	KC_PSLS,	KC_ASTR,	KC_LBRC,	KC_RBRC,							KI_DEGR,	XXXXXXX,	XXXXXXX,	XXXXXXX,	KC_PIPE,	XXXXXXX,
+	_______,	KC_EQL,		KC_MINS,	KC_PLUS,	KC_LCBR,	KC_RCBR,	_______,	_______,	XXXXXXX,	XXXXXXX,	KC_SCLN,	KC_COLN,	KC_BSLS,	_______,
 					_______,	_______,	_______,	_______,		_______,			_______,		_______,	_______,	_______,	_______
 ),
 
 /* RAISE
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * |      | LogX |SerFld|      |   ❤ |  Num |                    |      |      |      |      | Pause| Vers |
+ * |      | LogX |SerFld|      |      |      |                    | Scrl |      |      |      | Pause| Vers |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |      |   🐖 |  è é |   🚀 | Scrl |                    |      |   ù  |   ì  |   ò  | DLine|  Del |
+ * |      |      |  🐖  |   €  |  🚀  |  ❤ |                    | Caps |      |      |      | DLine|  Del |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |   à  |   🦑 |   😉 |  😘 | Caps |-------.    ,-------| Pscr |      |  Up  |      | Home | PgUp |
+ * |      |      |  🦑  |      |      |  😘 |-------.    ,-------|  Num |      |  Up  |      | Home | PgUp |
  * |------+------+------+------+------+------|  MUTE |    |  PLAY |------+------+------+------+------+------|
- * | Shift| Undo |  Cut | Copy | Paste|      |-------|    |-------|      | Left | Down | Right|  End |PgDown|
+ * |LShift| Undo |  Cut | Copy | Paste|  😉  |-------|    |-------| Pscr | Left | Down | Right|  End |PgDown|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *            |      |      |      |LOWER | /       /       \      \  |RAISE |      |      |      |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
 [_RAISE] = LAYOUT(
-	XXXXXXX,	MC_LOGX,	MC_SERF,	XXXXXXX,	X(UM_HART),	XXXXXXX,								XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	KC_PAUSE,	MC_VERS,
-	XXXXXXX,	XXXXXXX,	X(UM_PIGG),	KI_EUNC,	X(UM_ROKT),	KC_NUM,							XXXXXXX,	KI_UUNC,	KI_IUNC,	KI_OUNC,	KC_INS, 	KC_DEL,
-	XXXXXXX,	KI_AUNC,	X(UM_SQUI),	X(UM_WINK),	X(UM_KISS),	KC_CAPS,							KC_PSCR,	XXXXXXX,	KC_UP,		XXXXXXX,	KC_HOME,	KC_PGUP,
-	_______,	KC_UNDO,	KC_CUT,		KC_COPY,	KC_PASTE,	KC_SCRL,	_______,	_______,	XXXXXXX,	KC_LEFT,	KC_DOWN,	KC_RGHT,	KC_END,		KC_PGDN,
+	XXXXXXX,	MC_LOGX,	MC_SERF,	XXXXXXX,	XXXXXXX,	XXXXXXX,							KC_SCRL,	XXXXXXX,	XXXXXXX,	XXXXXXX,	KC_PAUSE,	MC_VERS,
+	XXXXXXX,	XXXXXXX,	X(UM_PIGG),	KI_EURO,	X(UM_ROKT),	X(UM_HART),							KC_CAPS,	XXXXXXX,	XXXXXXX,	XXXXXXX,	KC_INS, 	KC_DEL,
+	XXXXXXX,	XXXXXXX,	X(UM_SQUI),	XXXXXXX,	XXXXXXX,	X(UM_KISS),							KC_NUM,		XXXXXXX,	KC_UP,		XXXXXXX,	KC_HOME,	KC_PGUP,
+	_______,	KC_UNDO,	KC_CUT,		KC_COPY,	KC_PASTE,	X(UM_WINK),	_______,	_______,	KC_PSCR,	KC_LEFT,	KC_DOWN,	KC_RGHT,	KC_END,		KC_PGDN,
 					_______,	_______,	_______,	_______,		_______,			_______,    	_______,	_______,	_______,	_______
 ),
 
@@ -118,10 +118,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |QK_BOOT|     |QWERTY|COLEMAK|     |      |                    |      |      |      |      |      |      |
+ * |QK_BOOT|     |QWERTY|      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |      |MACWIN|      |      |      |-------.    ,-------|      | VOLDO| MUTE | VOLUP|      |      |
- * |------+------+------+------+------+------|  MUTE |    |  PLAY |------+------+------+------+------+------|
+ * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
  * |      |      |      |      |      |      |-------|    |-------|      | PREV | PLAY | NEXT |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *            |      |      |      |LOWER | /       /       \      \  |RAISE |      |      |      |
@@ -130,7 +130,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
   [_ADJUST] = LAYOUT(
 	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,							XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,
-	QK_BOOT,	XXXXXXX,	KC_QWERTY,	KC_COLEMAK,	CG_TOGG,	XXXXXXX,							XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,
+	QK_BOOT,	XXXXXXX,	KC_QWERTY,	XXXXXXX,	XXXXXXX,	XXXXXXX,							XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,
 	XXXXXXX,	XXXXXXX,	CG_TOGG,	XXXXXXX,	XXXXXXX,	XXXXXXX,							XXXXXXX,	KC_VOLD,	KC_MUTE,	KC_VOLU,	XXXXXXX,	XXXXXXX,
 	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,     XXXXXXX,	XXXXXXX,	KC_MPRV,	KC_MPLY,	KC_MNXT,	XXXXXXX,	XXXXXXX,
 					_______,	_______,	_______,	_______,		_______,			_______,    	_______,	_______,	_______,	_______
@@ -193,9 +193,9 @@ static void print_status_narrow(void) {
     // Print current locks
     oled_write_P(PSTR("\n"), false);
     led_t led_usb_state = host_keyboard_led_state();
-    oled_write_P(PSTR("NUMLK"), led_usb_state.num_lock);
-    oled_write_P(PSTR("CPSLK"), led_usb_state.caps_lock);
     oled_write_P(PSTR("SCRLK"), led_usb_state.scroll_lock);
+    oled_write_P(PSTR("CPSLK"), led_usb_state.caps_lock);
+    oled_write_P(PSTR("NUMLK"), led_usb_state.num_lock);
 	
     // Print current version
     oled_write_P(PSTR("\n\n\n\n"), false);
@@ -368,12 +368,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
-        if (clockwise) {
-            tap_code(KC_VOLU);
-        } else {
-            tap_code(KC_VOLD);
-        }
-    } else if (index == 1) {
 		led_t led_usb_state = host_keyboard_led_state();
         if (clockwise) {
 			if (!led_usb_state.num_lock) {
@@ -387,6 +381,12 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 			} else {
 				tap_code(KC_UP);
 			}
+        }
+    } else if (index == 1) {
+        if (clockwise) {
+            tap_code(KC_VOLU);
+        } else {
+            tap_code(KC_VOLD);
         }
     }
     return false;

@@ -6,6 +6,8 @@
 #define KI_IUNC     X(UM_IGRV)
 #define KI_OUNC     X(UM_OGRV)
 #define KI_UUNC     X(UM_UGRV)
+#define KI_DEGR     X(UM_DEGR)
+#define KI_EURO     X(UM_EURO)
 
 enum unicode_names {
     UM_SNEK,
@@ -21,6 +23,8 @@ enum unicode_names {
 	UM_IGRV,
 	UM_OGRV,
     UM_UGRV,
+    UM_DEGR,
+    UM_EURO,
 };
 
 const uint32_t unicode_map[] PROGMEM = {
@@ -37,6 +41,8 @@ const uint32_t unicode_map[] PROGMEM = {
 	[UM_IGRV]  = 0x00EC, // ì
 	[UM_OGRV]  = 0x00F2, // ò
     [UM_UGRV]  = 0x00F9, // ù
+	[UM_DEGR]  = 0x00B0, // °
+	[UM_EURO]  = 0x20AC, // €
 };
 
 #endif

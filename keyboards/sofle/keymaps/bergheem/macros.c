@@ -1,7 +1,8 @@
 #include "version.c"
 
 enum macro_keycodes {
-    MC_VERS = SAFE_RANGE,
+	MC_NULL = SAFE_RANGE,
+    MC_VERS,
     MC_LOGX,
     MC_SERF,
 #ifdef UNICODE_ENABLE

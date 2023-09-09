@@ -1,7 +1,15 @@
 #include "version.c"
 
 enum macro_keycodes {
-	MC_NULL = SAFE_RANGE,
+	// keymap occupies these keycodes
+    KC_OCCP0 = SAFE_RANGE,
+    KC_OCCP1,
+    KC_OCCP2,
+    KC_OCCP3,
+    KC_OCCP4,
+    KC_OCCP5,
+    KC_OCCP6,
+	// macro keycodes
     MC_VERS,
     MC_LOGX,
     MC_SERF,
@@ -10,6 +18,7 @@ enum macro_keycodes {
     MC_UGRV,
 #endif
 };
+
 
 bool send_macro(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {

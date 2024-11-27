@@ -370,13 +370,13 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
 		led_t led_usb_state = host_keyboard_led_state();
         if (clockwise) {
-			if (!led_usb_state.num_lock) {
+			if (layer_state_is(_RAISE) || layer_state_is(_LOWER)) {
 				tap_code(KC_RGHT);
 			} else {
 				tap_code(KC_DOWN);
 			}
         } else {
-			if (!led_usb_state.num_lock) {
+			if (layer_state_is(_RAISE) || layer_state_is(_LOWER)) {
 				tap_code(KC_LEFT);
 			} else {
 				tap_code(KC_UP);

@@ -33,7 +33,7 @@ bool send_macro(uint16_t keycode, keyrecord_t *record) {
 			break;
 		case MC_LOGX:
 			if (record->event.pressed) {
-				SEND_STRING("Debug.LogError(\"X\");");
+				SEND_STRING("Debug.LogError($\"X\");");
 			}
 			return true;
 			break;
